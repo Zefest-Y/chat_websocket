@@ -4,10 +4,8 @@ const campo = document.getElementById("msgInput")
 
 console.log("iniciou...")
 
-let id = 0;
-
 function envia(){
-    let mensagem = JSON.stringify({ ident: id, conteudo: campo.value})
+    let mensagem = JSON.stringify({conteudo: campo.value})
     ws.send(mensagem)
     campo.value = ""
 }
